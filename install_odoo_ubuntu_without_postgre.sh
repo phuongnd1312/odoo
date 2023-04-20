@@ -149,7 +149,7 @@ read -p "Using my github response [y/n] " IS_MYGITHUB
 if [ "$IS_MYGITHUB" = "y" ]; then
     read -p "Odoo my github " MY_GITHUB_RESPONSE
     # Odoo my github install!
-    GITHUB_RESPONSE=$(sudo git clone MY_GITHUB_RESPONSE $OE_HOME_EXT/ 2>&1)
+    GITHUB_RESPONSE=$(sudo git clone $MY_GITHUB_RESPONSE $OE_HOME_EXT/ 2>&1)
     while [[ $GITHUB_RESPONSE == *"Authentication"* ]]; do
         echo "\n============== WARNING ====================="
         echo "Your authentication with Github has failed! Please try again."
