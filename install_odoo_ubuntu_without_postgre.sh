@@ -159,7 +159,6 @@ if [ "$IS_MYGITHUB" = "y" ]; then
         echo " "
         GITHUB_RESPONSE=$(sudo git clone MY_GITHUB_RESPONSE $OE_HOME_EXT/ 2>&1)
     done
-fi
 else
   sudo git clone --depth 1 --branch $OE_VERSION https://www.github.com/odoo/odoo $OE_HOME_EXT/
 fi
